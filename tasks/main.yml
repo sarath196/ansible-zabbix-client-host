@@ -1,0 +1,16 @@
+---
+# tasks file for zabbix-client
+
+ 
+            
+    - name: Install Zabbix Agent Repository and other packages needed by Ansible
+      yum: 
+        pkg: "{{zabbix_repo_package}}"
+        state: installed 
+
+    - name: Install Zabbix Agent
+      yum: 
+        name: zabbix-agent
+        
+    
+            
